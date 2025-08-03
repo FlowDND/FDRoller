@@ -1,3 +1,8 @@
+# .gitignore files
+
+# Speicified folders
+drafts/**
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

@@ -187,24 +187,10 @@ def view(figure: PlotlyGraphObjects.Figure, n_face: int) -> PlotlyGraphObjects.F
 
 
 if __name__ == "__main__":
-    # 原有的演示代码
     config: dict = configTemplate()
-    # config["start_color"] = "cyan"
-    # config["middle_color"] = "white"
-    # config["end_color"] = "black"
-
-    dice = createDice("d6", config)
+    dice = createDice("d4", config)
     figure = PlotlyGraphObjects.Figure(data=dice)
     hide(figure)
     view(figure, 6)
     figure.show()
-    view(figure, 4).show()
-
-    # 演示所有骰子
-    # for i in [4, 6, 8, 10, 12, 20]:
-    #     dice = createDice(f"d{i}", config)
-    #     figure = PlotlyGraphObjects.Figure(data=dice)
-    #     hide(figure)
-    #     view(figure, 2)
-    #     figure.show()
     pass

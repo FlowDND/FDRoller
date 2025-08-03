@@ -18,7 +18,7 @@ DICE_NUMBER: dict[str, int] = {
 }
 
 DICE_VERTICES: dict[str, np.ndarray] = {
-    "d4": np.array([[1, 1, 1], [1, -1, -1], [-1, 1, -1], [-1, -1, 1]]) / 2,
+    "d4": np.array([[1, 1, 1], [1, -1, -1], [-1, 1, -1], [-1, -1, 1]]) * 1.5,
     "d6": np.array(
         [
             [1, 0, 0],
@@ -50,11 +50,10 @@ DICE_VERTICES: dict[str, np.ndarray] = {
             [-1, 0, 0],
             [np.cos(4 * np.pi / 3), np.sin(4 * np.pi / 3), 0],
             [np.cos(5 * np.pi / 3), np.sin(5 * np.pi / 3), 0],
-            [0, 0, 0.8],
-            [0, 0, -0.8],
+            [0, 0, 1.0],
+            [0, 0, -1.0],
         ]
-    )
-    / np.sqrt(3),
+    ),
     "d20": np.array(
         [
             [-1, PHI, 0],
